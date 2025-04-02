@@ -1,8 +1,40 @@
 {
+  "name": "sidegit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "gen-env": "gen-env-types .env -o src/env.d.ts -e .",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "dev": "nodemon dist/index.js",
+    "start": "node dist/index.js",
+    "start2": "ts-node src/index.ts",
+    "dev2": "nodemon --exec ts-node src/index.ts",
+    "mikro-orm": "mikro-orm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "devDependencies": {
-    "@mikro-orm/cli": "^6.4.11",
+    "@types/node": "^22.13.17",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@mikro-orm/cli": "^6.4.11",
+    "@mikro-orm/core": "^6.4.11",
+    "@mikro-orm/migrations": "^6.4.11",
+    "@mikro-orm/postgresql": "^6.4.11",
+    "dotenv": "^16.4.7",
+    "pg": "^8.14.1"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      ".src/mikro-orm.configs.ts",
+      ".dist/mikro-orm.configs.js"
+    ]
   }
 }
