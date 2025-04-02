@@ -18,6 +18,7 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^22.13.17",
+    "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   },
@@ -26,6 +27,14 @@
     "@mikro-orm/core": "^6.4.11",
     "@mikro-orm/migrations": "^6.4.11",
     "@mikro-orm/postgresql": "^6.4.11",
+    "dotenv": "^16.4.7",
     "pg": "^8.14.1"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      ".src/mikro-orm.configs.ts",
+      ".dist/mikro-orm.configs.js"
+    ]
   }
 }
