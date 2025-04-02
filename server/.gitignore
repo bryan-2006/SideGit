@@ -89,6 +89,7 @@ StyleCopReport.xml
 *.tli
 *.tlh
 *.tmp
+*.temp
 *.tmp_proj
 *_wpftmp.csproj
 *.log
@@ -157,6 +158,9 @@ coverage*.info
 _NCrunch_*
 .*crunch*.local.xml
 nCrunchTemp_*
+
+# MikroORM
+migrations/.snapshot-*.json
 
 # MightyMoose
 *.mm.*
@@ -307,6 +311,10 @@ node_modules/
 *.ncb
 *.aps
 
+# OS-Specific Files
+.DS_Store
+Thumbs.db
+
 # Visual Studio LightSwitch build output
 **/*.HTMLClient/GeneratedArtifacts
 **/*.DesktopClient/GeneratedArtifacts
@@ -401,3 +409,9 @@ FodyWeavers.xsd
 
 # Environment variables
 .env
+
+# Node.js
+node_modules/
+
+# Build Files
+dist/
